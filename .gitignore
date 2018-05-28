@@ -16,7 +16,12 @@ cabal.sandbox.config
 *.hp
 *.eventlog
 .stack-work/
+leia-eventful.cabal
 cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+*.iml
+/.idea/
+/out/
+/cabal.config
