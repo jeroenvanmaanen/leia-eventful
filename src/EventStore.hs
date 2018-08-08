@@ -28,3 +28,7 @@ counterStoreExample = do
   -- Now read the events back and print
   events' <- atomically $ getEvents reader (allEvents uuid)
   print events'
+
+  _ <- atomically $ storeEvents writer AnyVersion uuid [ CounterIncremented 2 ]
+  events'' <- atomically $ getEvents reader (allEvents uuid)
+  print events''

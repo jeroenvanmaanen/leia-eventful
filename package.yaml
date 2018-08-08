@@ -94,3 +94,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - leia-eventful
+    - easytest

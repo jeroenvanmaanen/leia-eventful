@@ -28,9 +28,9 @@ myEvents =
   ]
 
 handleCounterEvent :: Counter -> CounterEvent -> Counter
-handleCounterEvent (Counter count) (CounterIncremented amount) = Counter (count + amount)
-handleCounterEvent (Counter count) (CounterDecremented amount) = Counter (count - amount)
-handleCounterEvent _ (CounterReset) = Counter 0
+handleCounterEvent counter (CounterIncremented amount) = incrementCounter counter amount
+handleCounterEvent counter (CounterDecremented amount) = decrementCounter counter amount
+handleCounterEvent counter (CounterReset) = resetCounter counter
 
 counterProjection :: Projection Counter CounterEvent
 counterProjection =
