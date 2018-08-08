@@ -94,4 +94,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - leia-eventful
+    - Cabal
     - easytest
+    - text
+    - text-show
